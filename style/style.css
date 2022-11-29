@@ -1,0 +1,116 @@
+@import url("normalize.css");
+
+body{
+    background-color: rgb(44, 62, 63);
+}
+
+h1,h2,h3{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.header__title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    margin-top: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(179, 168, 149);
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.select{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    
+}
+.option{
+    margin-right: 25px;
+}
+
+select{
+    background-color: rgb(54, 54, 54);
+    color: rgb(179, 168, 149);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: solid 10px rgb(54, 54, 54);
+    border-radius: 5px;
+}
+
+select:hover{
+    background-color: rgb(20, 20, 20);
+    border: solid 10px rgb(20, 20, 20);
+}
+
+.button__refresh{
+    background-color: rgb(54, 54, 54);
+    color: rgb(179, 168, 149);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: solid 10px rgb(54, 54, 54);
+    border-radius: 5px;
+}
+
+.button__refresh:hover{
+    background-color: rgb(20, 20, 20);
+    border: solid 10px rgb(20, 20, 20);
+}
+
+.cart__films{
+    display: grid;
+    grid-template-columns: 500px 500px 500px;
+    max-width: 1800px;
+    margin: 0 auto;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 55px;
+    margin-top: 50px;
+    width: 300px;
+}
+
+.film__desc{
+    justify-content: center;
+    align-items: center;
+}
+
+.title__cart{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 39px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+}
+
+.text__cart{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
+    margin-bottom: 25px;
+}
+
+.other__color{
+    color: rgb(189, 189, 189);
+}
+
+.desc{
+    width: 300px;
+    margin-left: 30px;
+}
+
+.size__image{
+    max-width: 300px;
+    max-height: 400px;
+}

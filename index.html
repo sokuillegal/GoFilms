@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <script src="/script/script.js" defer></script>
+    <title>GoFilms</title>
+</head>
+<body>
+    <header>
+        <div class="header__title">
+            <h1>GoFilms</h1>
+        </div>
+    </header>
+    <main>
+        <div class="main">
+            <div class="select">
+                <div class="option">
+                    <select name="genre" id="">
+                        <option hidden selected value="s1" class="name__select">Жанр</option>
+                        <option value="s2" onclick="filterGenre()">Детектив</option>
+                        <option value="s3" onclick="filterGenre()">Комедия</option>
+                        <option value="s4" onclick="filterGenre()">Мелодрама</option>
+                        <option value="s5" onclick="filterGenre()">Ужасы</option>
+                        <option value="s6" onclick="filterGenre()">Драма</option>
+                        <option value="s7" onclick="filterGenre()">Приключения</option>
+                        <option value="s8" onclick="filterGenre()">Вестерн</option>
+                        <option value="s9" onclick="filterGenre()">Фэнтези</option>
+                        <option value="s10" onclick="filterGenre()">Боевик</option>
+                        <option value="s11" onclick="filterGenre()">Триллер</option>
+                        <option value="s12" onclick="filterGenre()">Биография</option>
+                        <option value="s13" onclick="filterGenre()">Документальное кино</option>
+                        <option value="s14" onclick="filterGenre()">Мультфильмы</option>
+                    </select>
+                </div>
+                <div class="option">
+                    <select name="year" id="">
+                        <option hidden selected value="a1">Год выпуска</option>
+                        <option value="a2">2022 год</option>
+                        <option value="a3">2021 год</option>
+                        <option value="a4">2020 год</option>
+                        <option value="a5">2019 год</option>
+                        <option value="a6">2018 год</option>
+                        <option value="a7">2017 год</option>
+                        <option value="a8">2016 год</option>
+                        <option value="a9">2015 год</option>
+                        <option value="a10">2010-ые</option>
+                        <option value="a11">2000-ые</option>
+                        <option value="a12">1990-ые</option>
+                        <option value="a13">1980-ые</option>
+                        <option value="a14">1970-ые</option>
+                        <option value="a15">1960-ые</option>
+                        <option value="a16">1950-ые</option>
+                        <option value="a17">1940-ые</option>
+                        <option value="a18">1930-ые</option>
+                        <option value="a19">1920-ые</option>
+                        <option value="a20">1910-ые</option>
+                        <option value="a21">1900-ые</option>
+                        <option value="a22">1890-ые</option>
+                    </select>
+                </div>
+                <div class="option">
+                    <select name="rating" id="">
+                        <option hidden selected value="b1">Рейтинг</option>
+                        <option value="b2">По возврастанию</option>
+                        <option value="b3">По убыванию</option>
+                    </select>
+                </div>
+                <div class="option">
+                    <select name="age restriction" id="">
+                        <option hidden selected value="c1">Возрастное ограничение</option>
+                        <option value="c2">0+</option>
+                        <option value="c3">6+</option>
+                        <option value="c4">12+</option>
+                        <option value="c5">16+</option>
+                        <option value="c6">18+</option>
+                    </select> 
+                </div>
+                <div class="option">
+                    <button type="button" onclick="refresh()" class="button__refresh">Сбросить</button>
+                </div>
+            </div>
+        </div>
+        <div class="cart__films">
+        </div>
+    </main>
+</body>
+</html>
