@@ -6,7 +6,9 @@ window.parent.location = window.parent.location.href;
 
 const cart__films = document.querySelector('.cart__films');
 
-function filmCart(name, image, video, genre, year, age, rating, desc){
+
+function filmCart(id, name, image, video, genre, year, age, rating, desc){
+    this.id = id;
     this.name = name;
     this.image = image;
     this.video = video;
@@ -18,6 +20,7 @@ function filmCart(name, image, video, genre, year, age, rating, desc){
 }
 
 const cartTaxi = new filmCart(
+    'infofilm.html',
     'Такси',
     'img/taxi1.jpg',
     'trailer/taxi1.mp4',
@@ -29,6 +32,7 @@ const cartTaxi = new filmCart(
 );
 
 const cartLeon = new filmCart(
+    '2',
     'Леон',
     'img/leon.jpg',
     'trailer/leon.mp4',
@@ -40,6 +44,7 @@ const cartLeon = new filmCart(
 );
 
 const cartFanatik = new filmCart(
+    '3',
     'Фанатик',
     'img/fanatik.jpg',
     'trailer/fanatik.mp4',
@@ -50,7 +55,20 @@ const cartFanatik = new filmCart(
     'В детстве еврейского мальчика по имени Дэнни Балинт выгнали из религиозной школы за вольнодумство.'
 );
 
+const cartFarsi = new filmCart(
+    '4',
+    'Уроки фарси',
+    'img/farsi.jpg',
+    'trailer/farsi.mp4',
+    'Драма, военный, история',
+    '2020',
+    '16+',
+    '7.9',
+    'Еврей выдает себя за перса, чтобы выжить в концлагере. Один из лучших российских фильмов о холокосте'
+);
+
 const cartUnderSilver = new filmCart(
+    '5',
     'Под Сильвер-Лэйк',
     'img/undersilverlake.jpg',
     'trailer/undersilver.mp4',
@@ -62,6 +80,7 @@ const cartUnderSilver = new filmCart(
 );
 
 const cartPlaceUnder = new filmCart(
+    '6',
     'Место под соснами',
     'img/placeundertree.jpg',
     'trailer/placeundertree.mp4',
@@ -73,6 +92,7 @@ const cartPlaceUnder = new filmCart(
 );
 
 const cartLove = new filmCart(
+    '7',
     'Есть мечты - будут и путешествия',
     'img/love.jpg',
     'trailer/love.mp4',
@@ -83,48 +103,71 @@ const cartLove = new filmCart(
     'Действие фильма происходит в 60-х годах прошлого века. Главный герой, мальчик по имени Бен, живет с родителями, каждый из которых имеет пунктик: мать без ума от кинозвезд, а отец обожает свою лодку и каждую свободную минуту занимается ее ремонтом.'
 );
 
+const cartLincoln = new filmCart(
+    '8',
+    'Линкольн для адвоката',
+    'img/lincoln.jpg',
+    'trailer/love.mp4',
+    'Криминал, триллер, драма, детектив',
+    '2011',
+    '16+',
+    '7.8',
+    'Адвокат решает доказать вину клиента. Мэттью МакКонахи в судебном триллере по бестселлеру Майкла Коннелли'
+);
+
 
 const films = [
     cartTaxi,
     cartLeon,
     cartFanatik,
+    cartFarsi,
     cartUnderSilver,
     cartPlaceUnder,
-    cartLove
+    cartLove,
+    cartLincoln
 ]
 
 
 films.forEach(object => {
     cart__films.innerHTML+=` <div class="container">
     <div class="film__desc">
-        <a href="${object.video}"><img src="${object.image}" alt="" class="size__image"></a>
-        <h1 class="title__cart">${object.name}</h1>
-        <p class="text__cart"><span class="other__color">Рейтинг:</span> ${object.rating}</p>
-        <p class="text__cart"><span class="other__color">Год:</span> ${object.year}</p>
-        <p class="text__cart"><span class="other__color">Возрастное ограничение:</span> ${object.age}</p>
-        <p class="text__cart"><span class="other__color">Жанр:</span> ${object.genre}</p>
-        <p class="text__cart"><span class="other__color">Описание:</span> ${object.desc}</p>
+        <a href="${object.id}" id="${object.id}"><img src="${object.image}" alt="" class="size__image"></a>
+        <div class="desc__cart">
+            <div class="rate__year">
+                <p class="text__cart"><span class="other__color">Рейтинг:</span> ${object.rating}</p>
+                <p class="text__cart"><span class="other__color">Год:</span> ${object.year}</p>
+            </div>
+            <h1 class="title__cart">${object.name}</h1>
+        </div>
     </div>
 </div>`;
 })
 
-function CreateCard(object){
-    cart__films.innerHTML+=`<div class="card">
-                    <div class="card__content">
-                        <img src="${object.image}" alt="">
-                    </div>
-                    <h1 class="card__title">${object.name}</h2>
-                </div>`;
-}
+// function CreateCard(object){
+//     cart__films.innerHTML+=`<div class="card">
+//                     <div class="card__content">
+//                         <img src="${object.image}" alt="">
+//                     </div>
+//                     <h1 class="card__title">${object.name}</h2>
+//                 </div>`;
+// }
 
 const filterBox = this.genre;
 
-function filterGenre(){
-    document.querySelector('.main' > '.select' > 'option').addEventListener('click', (event)=> {
-        if (event.target.tagName !== 'option') return false;
+// function filterGenre(object){
+//     const x = document.getElementById('.select').addEventListener('click', (event)=> {
+//         if(x === this.genre){
+//             console.log("ура")
+//         }else{
+//             console.log("сук")
+//         }
+//         if (event.target.tagName !== 'option') return false;
 
-        let filterClass = event.target.dataset['genre'];
-        console.log('log');
+//         let filterClass = event.target.dataset['genre'];
+//         console.log('log');
 
-    })
-}
+//     })
+// }
+
+// const x = document.getElementsByTagName('select')
+// console.log(x);
