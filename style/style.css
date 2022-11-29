@@ -54,7 +54,7 @@ select:hover{
 
 .button__refresh{
     background-color: rgb(54, 54, 54);
-    color: rgb(179, 168, 149);
+    color: #b3a895;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border: solid 10px rgb(54, 54, 54);
     border-radius: 5px;
@@ -67,8 +67,8 @@ select:hover{
 
 .cart__films{
     display: grid;
-    grid-template-columns: 500px 500px 500px;
-    max-width: 1800px;
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+    max-width: 1500px;
     margin: 0 auto;
     margin-top: 50px;
     justify-content: center;
@@ -76,29 +76,35 @@ select:hover{
 
 .container{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 55px;
-    margin-top: 50px;
+    margin-bottom: 50px;
     width: 300px;
 }
 
 .film__desc{
-    justify-content: center;
-    align-items: center;
+    margin: auto;
+}
+
+.desc__cart{
+    display: grid;
+}
+
+.rate__year{
+    display: flex;
+    margin-bottom: 10px;
 }
 
 .title__cart{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 39px;
+    font-size: 27px;
     color: rgb(255, 255, 255);
-    margin-bottom: 30px;
 }
 
 .text__cart{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(255, 255, 255);
-    margin-bottom: 25px;
+    margin-top: 10px;
+    margin-bottom: auto;
+    margin-right: 20px;
 }
 
 .other__color{
@@ -111,6 +117,31 @@ select:hover{
 }
 
 .size__image{
-    max-width: 300px;
-    max-height: 400px;
+    width: 300px;
+    height: 400px;
+    transition: all .2s ease-in-out;
+    border-radius: 10px;
+}
+
+.size__image:hover{
+    transform: scale(1.05,1.05);
+    -webkit-box-shadow: 0px 0px 24px 4px rgba(122, 114, 100, 0.75);
+    -moz-box-shadow: 0px 0px 24px 4px rgba(122, 114, 100, 0.75);
+    box-shadow: 0px 0px 24px 4px rgba(122, 114, 100, 0.75);
+}
+
+.class1{
+    width: 100px;
+    height: 100px;
+    background-color: #b3a895;
+    color: #b3a895;
+}
+
+.info__films{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+    max-width: 1500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    justify-content: center;
 }
