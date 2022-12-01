@@ -14,7 +14,7 @@ const films = [
     {
         id: 0,
         name: 'Уроки фарси',
-        image: 'img/farsi.jpg',
+        image: '../img/farsi.jpg',
         genre: 'Драма, Военный, История',
         year: '2020',
         age: '16+',
@@ -24,7 +24,7 @@ const films = [
     {
         id: 1,
         name: 'Под Сильвер-Лэйк',
-        image: 'img/undersilverlake.jpg',
+        image: '../img/undersilverlake.jpg',
         genre: 'Драма, Триллер, Детектив',
         year: '2018',
         age: '18+',
@@ -34,7 +34,7 @@ const films = [
     {
         id: 2,
         name: 'Место под соснами',
-        image: 'img/placeundertree.jpg',
+        image: '../img/placeundertree.jpg',
         genre: 'Криминал, Драма, Триллер',
         year: '2012',
         age: '16+',
@@ -44,7 +44,7 @@ const films = [
     {
         id: 3,
         name: 'Линкольн для адвоката',
-        image: 'img/lincoln.jpg',
+        image: '../img/lincoln.jpg',
         genre: 'Криминал, Триллер, Драма, Детектив',
         year: '2011',
         age: '16+',
@@ -54,7 +54,7 @@ const films = [
     {
         id: 4,
         name: 'Есть мечты - будут и путешествия',
-        image: 'img/love.jpg',
+        image: '../img/love.jpg',
         genre: 'Драма',
         year: '2007',
         age: '12+',
@@ -64,7 +64,7 @@ const films = [
     {
         id: 5,
         name: 'Фанатик',
-        image: 'img/fanatik.jpg',
+        image: '../img/fanatik.jpg',
         genre: 'Драма',
         year: '2001',
         age: '16+',
@@ -75,7 +75,7 @@ const films = [
         
         id: 6,
         name: 'Такси',
-        image: 'img/taxi1.jpg',
+        image: '../img/taxi1.jpg',
         genre: 'Боевик, Комедия, Криминал',
         year: '1998',
         age: '16+',
@@ -85,7 +85,7 @@ const films = [
     {
         id: 7,
         name: 'Леон',
-        image: 'img/leon.jpg',
+        image: '../img/leon.jpg',
         genre: 'Боевик, Криминал, Драма',
         year: '1994',
         age: '16+',
