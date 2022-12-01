@@ -1,14 +1,8 @@
 'use strict';
 
-const cart__films = document.querySelector('.cart__films');
-const genres = document.querySelectorAll("#genre");
-const years = document.querySelectorAll("#year");
-const ages = document.querySelectorAll("#age");
-const ratings = document.querySelectorAll("#rating");
+const block = document.querySelector('.block');
 
-function refresh(){
-window.parent.location = window.parent.location.href;
-};
+const mainPage = window.location.href.toString();
 
 const films = [
     {
@@ -94,42 +88,17 @@ const films = [
     },
 ];
 
-function changeFunc(i) {
-    filter(i)
-};
-
-function link(films){
-    window.location.href = 'infofilm.html'
-};
-
-cards(films)
-// const filmsCopy = []
-// filmsCopy.push.apply(filmsCopy, films)
-console.log(filmsCopy)
-function filter(i){
-    const filmsCopy = []
-    films.forEach(item =>{
-        if(((item.genre.includes(i)) || item.year.includes(i) || item.age.includes(i))){
-            filmsCopy.push(item)
-        }
-    });
-    cards(filmsCopy);
-}
-filter()
-function cards(films){
-    cart__films.innerHTML = '';
-    films.forEach(element=> {
-        cart__films.innerHTML+=`<div class="container">
-        <div class="film__desc">
-        <a href = "./script_second.js?=${element.id}"><img src="${element.image}" alt="" class="size__image" id="${element.id}"></a>
-            <div class="desc__cart">
-                <div class="rate__year">
-                    <p class="text__cart"><span class="other__color">Рейтинг:</span> ${element.rating}</p>
-                    <p class="text__cart"><span class="other__color">Год:</span> ${element.year}</p>
-                </div>
-                <h1 class="title__cart">${element.name}</h1>
+for (let i = 0; i < 8; i++){
+    if(i === +mainPage.substr(mainPage.length - 1)){
+        block.innerHTML += `<h1 class="title__cart__second">Название</h1>
+        <div class="glue">
+            <img src="${films.image}" alt="" class="size__image__second">
+            <div class="description">
+                <p class="text__cart"><span class="other__color">Жанр: </span>${films.genre}</p>
+                <p class="text__cart"><span class="other__color">Возрастное ограничение: </span>${films.age}</p>
+                <p class="text__cart"><span class="other__color">Рейтинг: </span>${films.rating}</p>
+                <p class="text__cart"><span class="other__color">Год: </span>${films.desc}</p>
             </div>
-        </div>
-    </div>`;
-})
+        </div>`
+    }
 }

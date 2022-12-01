@@ -4,87 +4,120 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
-    <script src="../script/script.js" defer></script>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="icon" href="/img/icon.png" type="image/x-icon">
+    <script src="/script/script.js" defer></script>
+    <script src="/script/script_second.js"></script>
     <title>GoFilms</title>
 </head>
 <body>
     <header>
         <div class="header__title">
-            <h1>GoFilms</h1>
+            <a href="/index.html" class="main__link"><h1 class="name__title">GoFilms</h1></a>
+            <div class="search__films">
+                <form>
+                  <input type="text" placeholder="Фильмы, сериалы...">
+                  <button type="submit"></button>
+                </form>
+            </div>
+            <div class="menu__header">
+                <p class="text__menu">Главная</p>
+                <p class="text__menu">Фильмы</p>
+                <p class="text__menu">Сериалы</p>
+            </div>
         </div>
     </header>
     <main>
         <div class="main">
-            <div class="select">
+            <form class="select" id="select">
                 <div class="option">
-                    <select name="genre" id="x">
-                        <option hidden selected value="s1" class="name__select">Жанр</option>
-                        <option value="s2" onclick="filterGenre()">Детектив</option>
-                        <option value="s3" onclick="filterGenre()">Комедия</option>
-                        <option value="s4" onclick="filterGenre()">Мелодрама</option>
-                        <option value="s5" onclick="filterGenre()">Ужасы</option>
-                        <option value="s6" onclick="filterGenre()">Драма</option>
-                        <option value="s7" onclick="filterGenre()">Приключения</option>
-                        <option value="s8" onclick="filterGenre()">Вестерн</option>
-                        <option value="s9" onclick="filterGenre()">Фэнтези</option>
-                        <option value="s10" onclick="filterGenre()">Боевик</option>
-                        <option value="s11" onclick="filterGenre()">Триллер</option>
-                        <option value="s12" onclick="filterGenre()">Биография</option>
-                        <option value="s13" onclick="filterGenre()">Документальное кино</option>
-                        <option value="s14" onclick="filterGenre()">Мультфильмы</option>
+                    <select name="genre" id="genre" onchange="changeFunc(value)">
+                        <option hidden selected class="name__select">Жанр</option>
+                        <option value="Детектив">Детектив</option>
+                        <option value="Комедия">Комедия</option>
+                        <option value="Мелодрама">Мелодрама</option>
+                        <option value="Ужасы">Ужасы</option>
+                        <option value="Драма">Драма</option>
+                        <option value="Приключения">Приключения</option>
+                        <option value="Вестерн">Вестерн</option>
+                        <option value="Фэнтези">Фэнтези</option>
+                        <option value="Боевик">Боевик</option>
+                        <option value="Триллер">Триллер</option>
+                        <option value="Биография">Биография</option>
+                        <option value="Документальное кино">Документальное кино</option>
+                        <option value="Мультфильмы">Мультфильмы</option>
                     </select>
                 </div>
                 <div class="option">
-                    <select name="year" id="">
-                        <option hidden selected value="a1">Год выпуска</option>
-                        <option value="a2">2022 год</option>
-                        <option value="a3">2021 год</option>
-                        <option value="a4">2020 год</option>
-                        <option value="a5">2019 год</option>
-                        <option value="a6">2018 год</option>
-                        <option value="a7">2017 год</option>
-                        <option value="a8">2016 год</option>
-                        <option value="a9">2015 год</option>
-                        <option value="a10">2010-ые</option>
-                        <option value="a11">2000-ые</option>
-                        <option value="a12">1990-ые</option>
-                        <option value="a13">1980-ые</option>
-                        <option value="a14">1970-ые</option>
-                        <option value="a15">1960-ые</option>
-                        <option value="a16">1950-ые</option>
-                        <option value="a17">1940-ые</option>
-                        <option value="a18">1930-ые</option>
-                        <option value="a19">1920-ые</option>
-                        <option value="a20">1910-ые</option>
-                        <option value="a21">1900-ые</option>
-                        <option value="a22">1890-ые</option>
+                    <select name="year" id="year" onchange="changeFunc(value)">
+                        <option hidden selected>Год выпуска</option>
+                        <option value="2022">2022 год</option>
+                        <option value="2021">2021 год</option>
+                        <option value="2020">2020 год</option>
+                        <option value="2019">2019 год</option>
+                        <option value="2018">2018 год</option>
+                        <option value="2017">2017 год</option>
+                        <option value="2016">2016 год</option>
+                        <option value="2015">2015 год</option>
+                        <option value="2014">2014 год</option>
+                        <option value="2012">2012 год</option>
+                        <option value="2011">2011 год</option>
+                        <option value="2010">2010 год</option>
+                        <option value="2009">2009 год</option>
+                        <option value="2008">2008 год</option>
+                        <option value="2007">2007 год</option>
+                        <option value="2006">2006 год</option>
+                        <option value="2005">2005 год</option>
+                        <option value="2004">2004 год</option>
+                        <option value="2003">2003 год</option>
+                        <option value="2002">2002 год</option>
+                        <option value="2001">2001 год</option>
+                        <option value="2000">2000 год</option>
+                        <option value="1999">1999 год</option>
+                        <option value="1998">1998 год</option>
+                        <option value="1997">1997 год</option>
+                        <option value="1996">1996 год</option>
+                        <option value="1995">1995 год</option>
+                        <option value="1994">1994 год</option>
+                        <option value="1993">1993 год</option>
+                        <option value="1992">1992 год</option>
+                        <option value="1991">1991 год</option>
+                        <option value="1990">1990 год</option>
                     </select>
                 </div>
                 <div class="option">
-                    <select name="rating" id="">
-                        <option hidden selected value="b1">Рейтинг</option>
-                        <option value="b2">По возврастанию</option>
-                        <option value="b3">По убыванию</option>
+                    <select name="rating" id="rating" >
+                        <option hidden selected>Рейтинг</option>
+                        <option value="По возврастанию">По возврастанию</option>
+                        <option value="По убыванию">По убыванию</option>
                     </select>
                 </div>
                 <div class="option">
-                    <select name="age restriction" id="">
-                        <option hidden selected value="c1">Возрастное ограничение</option>
-                        <option value="c2">0+</option>
-                        <option value="c3">6+</option>
-                        <option value="c4">12+</option>
-                        <option value="c5">16+</option>
-                        <option value="c6">18+</option>
-                    </select> 
-                </div>
+                    <select name="age restriction" id="age" onchange="changeFunc(value)">
+                        <option hidden selected>Возрастное ограничение</option>
+                        <option value="12+">12+</option>
+                        <option value="16+">16+</option>
+                        <option value="18+">18+</option>
+                    </select>
+                </div>      
                 <div class="option">
-                    <button type="button" onclick="refresh()" class="button__refresh">Сбросить</button>
-                </div>
-            </div>
+                    <button type="reset" from="select" class="button__refresh">Сбросить</button>
+                </div> 
+            </form>      
         </div>
         <div class="cart__films">
         </div>
     </main>
+    <footer>
+        <div class="footer__menu">
+            <p class="text__footer">Вакансии</p>
+            <p class="text__footer">Реклама</p>
+            <p class="text__footer">Соглашение</p>
+            <p class="text__footer">Справка</p>
+            <p class="text__footer">Блог</p>
+            <p class="text__footer">Предложения</p>
+            <p class="text__footer">Служба поддержки</p>
+        </div>
+    </footer>
 </body>
 </html>
