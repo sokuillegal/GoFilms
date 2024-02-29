@@ -1,4 +1,4 @@
-'use strict';
+
 
 const cart__films = document.querySelector('.cart__films');
 const genres = document.querySelectorAll("#genre");
